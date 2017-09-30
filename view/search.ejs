@@ -1,0 +1,32 @@
+
+<html>
+<header>
+    <title>Login User</title>
+</header>
+
+<body>
+
+  <form action="/search" method="GET">
+        <p>Search:<input type="text" name="searchtext" /></p>
+        <input type="submit" name="submit" />
+   </form>
+ <%if(query ){%>
+ <% product.forEach(function (product) { %>
+    <li>  
+        <h1>Name: <%= product.name %></h1>  
+    </li> 
+    <li>  
+        <h1>Decription: <%= product.decription %></h1>  
+    </li> 
+    <li>  
+        <h1>Price: <%= product.price %></h1>  
+    </li>  
+    <li>  
+        <h1>-------------------------</h1>  
+    </li>
+           
+<% }); %>
+    <%}%>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<% product.forEach(function (product) { %>
+    <li>  
+        <h1>Name: <%= product.name %></h1>  
+    </li> 
+    <li>  
+        <h1>Decription: <%= product.decription %></h1>  
+    </li> 
+    <li>  
+        <h1>Price: <%= product.price %></h1>  
+    </li>  
+           
+<form action="/cart/ <%= product.id %> " method="POST">
+	 <input type="submit" name="submit" />
+</form>
+
+<% }) %>
+
+</body>
+</html>
